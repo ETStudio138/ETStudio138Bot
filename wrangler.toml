@@ -1,0 +1,13 @@
+
+name = "tgbotmepinstorelike"
+main = "src/index.ts"
+compatibility_date = "2025-01-24"
+compatibility_flags = ["nodejs_compat"]
+
+[observability]
+enabled = true
+
+[vars]
+TELEGRAM_BOT_TOKEN = "7575399107:AAEIN9kMujtZD3mwmhicPMP-Ov3DLcLl7jA"
+CHANNEL_CHAT_ID = "-1002147730040"
+LINK_SUBSCRIBED_CHANNEL = "https://t.me/+PEFVOK4SHvgzMmNi"
