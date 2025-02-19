@@ -31,10 +31,10 @@ export const sendMainButton = async (
     const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
     const payload = {
       chat_id: chatId,
-      text: "📜 Main Menu",
+      text: "📜Главное меню",
       reply_markup: {
         inline_keyboard: [[
-          { text: 'Get $190 ', callback_data: "get_first_content"},
+          { text: 'Получить 500 руб', callback_data: "get_first_content"},
           { text: "☰", callback_data: "main_menu" }
         ]],
       },
