@@ -5,50 +5,49 @@ import menuItemsData from './menuItems.json';
 
 
 const get_start_content = `
-*💼 Have a business? Reduce costs!*  
-*🛠️ No business? Start without expenses!*  
-\n🎯 Solutions for your business to save and earn money:  
-✅ **Become a partner of the "Your Business | PRIVACY Idea & Business Development" program.** 💸  
-💡 **Launch a CMS-based site ready for advertising (possibly for free).**  
-🔹 **Accept payments without a subscription fee via Telegram and website:**  
-☁️ Cloud-based cashier from 1.5% per payment. 
-    📜 Fully compliant with regulations. 
-    🏦 No cash register required at the start.  
-🔹 **Cloud-based 1C without subscription fees.**  
-🔹 **Comprehensive solutions:** website + 1C + advertising from **5000 rubles** per month.  
-🔹 **Get up to 20,000 rubles cashback for advertising through Yandex.Direct!**  
-🔹 ✨ **And much more...**
+*💼 Есть бизнес — сократите расходы!*  
+*🛠️ Нет бизнеса — начните без расходов!*  
+       
+🎯 Решения для вашего бизнеса, которые помогут экономить и зарабатывать:  
+✅ **Станьте партнёром программы "Свой в бизнесе | PRIVACY развитие идей и дела".** 💸  
+💡 **Запустите сайт на CMS, готовый к рекламе (возможно бесплатно).**  
+🔹 **Принимайте платежи без абонентской платы через Telegram и сайт:**  
+☁️ Облачная касса от 1.5% за платеж. 
+    📜 Всё по 54-ФЗ. 
+    🏦 Без кассового аппарата на старте.  
+🔹 **Облачная 1С без абонентской оплаты.**  
+🔹 **Комплексные решения:** сайт + 1С + реклама от **5000 рублей** в месяц.  
+🔹 **Возврат до 20 000 рублей на рекламу через Яндекс.Директ!**  
+🔹 ✨ **И многое другое...**
 
-💬 Want it? Take it. Don't want it? No problem. You can get **500 rubles** for a simple action, and we get **1000 rubles** — just a bonus.  
+💬 Хотите — берите, хотите — нет. Вы можете получить **500 рублей** за простое действие, а мы получим **1000 рублей** — это просто бонус.  
 ⎯⎯⎯⎯⎯⎯⎯⎯⎯  
-*Start your business — create products and services.* Advertising and sales will be needed for your business. Take the first step, and earnings will follow your growth. 😉
-                
-[🛒 Buy Now](https://storelikepinterest.pages.dev/init-payment/product-1/) — Click here to make a payment and start your business!`;
+*Начните ваш бизнес — создавайте товары и услуги.* Реклама и продажи понадобятся вашему бизнесу. Сделайте первый шаг, и заработок станет результатом вашего развития. 😉
+`;
 
 const get_first_content = `
-🚀 **Get Your Business Online in Just 3 Days!**
+🚀 Выведите свой бизнес онлайн всего за 3 дня!
 
-1️⃣ **Your business online in 3 days!**  
-We create your website, integrate a chatbot and AI assistant so your customers can start ordering from day one.
+1️⃣ Ваш бизнес в интернете за 3 дня!
+Мы создаем сайт, интегрируем чат-бота и ИИ-ассистента, чтобы ваши клиенты могли заказывать с первого дня.
 
-2️⃣ **Fast ad setup & instant content adaptation!**  
-Your ad campaign isn’t delivering results? Just update headlines, texts, and offers directly in the CMS – no developers needed!
+2️⃣ Быстрая настройка рекламы и мгновенная адаптация контента!
+Реклама не приносит результатов? Просто обновите заголовки, тексты и офферы прямо в CMS — без помощи разработчиков!
 
-3️⃣ **Perfect for any niche!**  
-E-commerce, services, info business, B2B – the site adapts effortlessly to any industry, testing offers on the go.
+3️⃣ Идеально для любого бизнеса!
+E-commerce, услуги, инфобизнес, B2B — сайт легко адаптируется под любую нишу и позволяет тестировать офферы на лету.
 
-4️⃣ **AI analyzes your audience and boosts sales!**  
-Track customer behavior and adjust your strategy in real time – AI will show you what works best.
+4️⃣ ИИ анализирует аудиторию и увеличивает продажи!
+Отслеживайте поведение клиентов и корректируйте стратегию в реальном времени — ИИ подскажет, что работает лучше всего.
 
-5️⃣ **Maximum flexibility – manage content on the go!**  
-Update offers, texts, and headlines in the middle of your ad campaign – adapt to your audience and ad platform algorithms with just one click.
+5️⃣ Максимальная гибкость — управляйте контентом на ходу!
+Обновляйте офферы, тексты и заголовки прямо во время рекламной кампании — адаптируйтесь под аудиторию и алгоритмы рекламных платформ одним кликом.
 
+💬 Нужно? Берите. Не нужно? Не проблема. Вы получаете 500 рублей за простое действие, а мы — 1000 рублей в качестве бонуса.
+⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Запускайте бизнес — создавайте продукты и услуги. Вам понадобятся реклама и продажи. Сделайте первый шаг, и доход будет расти вместе с вами. 😉
 
-💬 Want it? Take it. Don't want it? No problem. You can get **500 rubles** for a simple action, and we get **1000 rubles** — just a bonus.  
-⎯⎯⎯⎯⎯⎯⎯⎯⎯  
-*Start your business — create products and services.* Advertising and sales will be needed for your business. Take the first step, and earnings will follow your growth. 😉
-                
-[🛒 Buy Now](https://storelikepinterest.pages.dev/init-payment/product-1/) — Click here to make a payment and start your business!
+🛒 [**Купить сейчас**](https://ox1c.ru/init-payment/yandex-direct-seo) — нажмите здесь, чтобы оплатить и запустить свой бизнес!
  `;
 
 
