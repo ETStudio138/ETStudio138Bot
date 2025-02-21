@@ -83,7 +83,7 @@ export async function checkSubscription(userId: number, BOT_TOKEN: string, CHANN
     const response = await fetch(url);
     const data: any = await response.json();
 
-    if (data.ok && data.result?.status === "member") {
+    if (data.ok && ["member", "administrator", "creator"].includes(data.result?.status)) {
       return true;
     } else {
       return false;
