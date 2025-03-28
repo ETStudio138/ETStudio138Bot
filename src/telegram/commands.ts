@@ -126,7 +126,7 @@ export const handleTelegramMessage = async (
             const imageUrl = 'https://access-etstudio-bot.pages.dev/buh_final_tax_reporting.png';
             await sendMessage(chatId, get_buh_content, BOT_TOKEN, "Markdown");
 			try {
-				await sendPhoto(chatId, imageUrl, '', BOT_TOKEN); // Отправляем изображение без подписи
+				await sendPhoto(chatId, imageUrl, 'Пример страницы отправки деклараций', BOT_TOKEN); // Отправляем изображение без подписи
 			} catch (error) {
 				console.error("Error sending photo:", error);
 				await sendMessage(chatId, `❌ Ошибка при отправке изображения: ${error.message}`, BOT_TOKEN);

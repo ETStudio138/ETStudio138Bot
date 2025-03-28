@@ -28,9 +28,9 @@ export const sendPhoto = async (chatId: number, photoUrl: string, caption: strin
 	const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendPhoto`;
 	const payload = {
 			chat_id: chatId,
-			photo: photoUrl,
 			caption: caption,
-			parse_mode: parseMode || "HTML",
+			photo: photoUrl,
+
 	};
 
 	await fetch(url, {
