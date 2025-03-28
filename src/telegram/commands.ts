@@ -161,6 +161,15 @@ export const handleTelegramMessage = async (
             await sendMessage(chatId, `Hello! I am the bot 👉 **${formattedBotName}**. ${get_first_content}`, BOT_TOKEN, "Markdown");
             await sendMainButton(chatId, BOT_TOKEN);
         } else if (message.text === '/help_buh') {
+			const isSubscribed = await checkSubscription(chatId, BOT_TOKEN, CHANNEL_CHAT_ID);
+            if (!isSubscribed) {
+                await sendMessage(
+                    chatId,
+                    `❌ To use this command, subscribe to the channel: ${LINK_SUBSCRIBED_CHANNEL}`,
+                    BOT_TOKEN
+                );
+                return new Response('User not subscribed');
+            }
             await sendMessage(chatId, get_buh_content, BOT_TOKEN, "Markdown");
             await sendMainButton(chatId, BOT_TOKEN);
         } else {
