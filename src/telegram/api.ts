@@ -10,7 +10,7 @@ export const sendMessage = async (
   const payload = {
       chat_id: chatId,
       text,
-      parse_mode: parseMode ? parseMode : undefined, 
+      parse_mode: parseMode ? parseMode : undefined,
   };
 
   try {
@@ -23,6 +23,23 @@ export const sendMessage = async (
       console.error("Error sending message:", error);
   }
 };
+
+export const sendPhoto = async (chatId: number, photoUrl: string, caption: string, BOT_TOKEN: string, parseMode?: "Markdown" | "HTML") => {
+	const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendPhoto`;
+	const payload = {
+			chat_id: chatId,
+			photo: photoUrl,
+			caption: caption,
+			parse_mode: parseMode || "HTML",
+	};
+
+	await fetch(url, {
+			method: "POST",
+			headers: { "Content-Type": "application/json" },
+			body: JSON.stringify(payload),
+	});
+};
+
 
 export const sendMainButton = async (
     chatId: number,
@@ -39,7 +56,7 @@ export const sendMainButton = async (
         ]],
       },
     };
-  
+
     try {
       await fetch(url, {
         method: "POST",
@@ -95,11 +112,11 @@ export async function checkSubscription(userId: number, BOT_TOKEN: string, CHANN
 
 export const getBotName = async (botToken: string): Promise<string> => {
   const url = `https://api.telegram.org/bot${botToken}/getMe`;
-  
+
   try {
     const response = await fetch(url);
     const data:any  = await response.json();
-    
+
     if (data.ok && data.result) {
       return data.result.first_name || 'Bot';
     } else {
