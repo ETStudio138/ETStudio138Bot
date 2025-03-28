@@ -7,7 +7,7 @@ const get_start_content = `
 *💼 Есть бизнес — сократите расходы!*
 *🛠️ Нет бизнеса — начните без расходов!*
 
-КОМАНДА */help_buh* расскажет сдавать нулевую отчетность за 0 руб/мес. и экономить до 5000 руб ежемесячно.
+КОМАНДА */help_buh* расскажет как сдавать нулевую отчетность за 0 руб/мес. и экономить до 5000 руб ежемесячно.
 
 🎯 Решения для вашего бизнеса, которые помогут экономить и зарабатывать:
 ✅ **Станьте партнёром программы "Свой в бизнесе | PRIVACY развитие идей и дела".** 💸
@@ -124,7 +124,14 @@ export const handleTelegramMessage = async (
 
         if (callbackData === 'get_buh_content') {
             const imageUrl = 'https://access-etstudio-bot.pages.dev/buh_final_tax_reporting.png';
-            await sendPhoto(chatId, imageUrl, get_buh_content, BOT_TOKEN, "Markdown");
+            await sendMessage(chatId, get_buh_content, BOT_TOKEN, "Markdown");
+			try {
+				await sendPhoto(chatId, imageUrl, '', BOT_TOKEN); // Отправляем изображение без подписи
+			} catch (error) {
+				console.error("Error sending photo:", error);
+				await sendMessage(chatId, `❌ Ошибка при отправке изображения: ${error.message}`, BOT_TOKEN);
+			}
+
         } else if (callbackData === 'get_first_content') {
             await sendMessage(chatId, `Hello! I am the bot 👉 **${formattedBotName}**. ${get_first_content}`, BOT_TOKEN, "Markdown");
         } else if (callbackData === 'main_menu') {
