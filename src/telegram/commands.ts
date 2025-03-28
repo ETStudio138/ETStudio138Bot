@@ -127,6 +127,8 @@ export const handleTelegramMessage = async (
             await sendMessage(chatId, get_buh_content, BOT_TOKEN, "Markdown");
 			try {
 				await sendPhoto(chatId, imageUrl, 'Пример страницы отправки деклараций', BOT_TOKEN); // Отправляем изображение без подписи
+				console.log("SEND PHOTO sending photo:");
+
 			} catch (error) {
 				console.error("Error sending photo:", error);
 				await sendMessage(chatId, `❌ Ошибка при отправке изображения: ${error.message}`, BOT_TOKEN);
