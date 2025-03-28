@@ -210,9 +210,16 @@ export const handleTelegramMessage = async (
             await sendMainButton(chatId, BOT_TOKEN);
         } else if (message.text === '/help') {
             // Handling /help command
-            await sendMessage(chatId, "Help:\n/start - start\n/help - help", BOT_TOKEN);
+            await sendMessage(chatId, "Help:\n/start - start\n/help - помощь\n/help_buh - помощь по нулевой отчетности", BOT_TOKEN);
             await sendMainButton(chatId, BOT_TOKEN);
-        } else if (message.text === '/get_first_content') {
+        } 
+        
+        else if (callbackData === 'get_buh_content') {
+            const imageUrl = 'https://access-etstudio-bot.pages.dev/buh_final_tax_reporting.png';
+            await sendPhoto(chatId, imageUrl, get_buh_content, BOT_TOKEN, "Markdown");
+        }
+        
+        else if (message.text === '/get_first_content') {
             // Проверка подписки
             const isSubscribed = await checkSubscription(chatId, BOT_TOKEN, CHANNEL_CHAT_ID);
             if (!isSubscribed) {
@@ -241,6 +248,11 @@ export const handleTelegramMessage = async (
             // Показываем основное меню после отправки контента
             await sendMainButton(chatId, BOT_TOKEN);
         }
+
+        else if (message.text === '/help_buh') {
+            await sendMessage(chatId, get_buh_content, BOT_TOKEN, "Markdown");
+            await sendMainButton(chatId, BOT_TOKEN);
+        } 
 
         else {
             // Handling unknown commands
